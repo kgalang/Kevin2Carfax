@@ -1,0 +1,1 @@
+export const QUIZ_API_ENDPOINT = 'https://reqres.in/api/unknown';

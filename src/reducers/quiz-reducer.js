@@ -1,9 +1,9 @@
-import { quizTypes } from '../actions/action-types';
-const { FETCH_QUIZ } = quizTypes;
+import { FETCH_QUIZ } from '../actions/action-types';
 
 export default function quizReducer(state = '', { type, payload }) {
     switch (type) {
         case FETCH_QUIZ:
+            console.log("FROM REDUCER " + type);
             return {
                 quiz: payload
             }

@@ -1,3 +1,1 @@
-export const quizTypes = {
-    FETCH_QUIZ: 'FETCH_QUIZ'
-}
+export const FETCH_QUIZ = 'FETCH_QUIZ';
