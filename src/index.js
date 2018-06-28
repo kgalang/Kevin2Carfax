@@ -13,26 +13,30 @@ import {
 } from 'redux';
 import { Provider } from 'react-redux';
 
-//const allReducers = combineReducers({ });
+import quizReducer from './reducers/quiz-reducer';
+
+const allReducers = combineReducers({ 
+    quiz: quizReducer
+});
 
 const allStoreEnhancers = compose(
     applyMiddleware(thunk),
     window.devToolsExtension && window.devToolsExtension()
 )
 
-/*
+const initialState = {
+    quiz: 'no quiz'
+}
+
 const store = createStore(
     allReducers,
-    beginning state,
+    initialState,
     allStoreEnhancers
 );
-*/
-
 
 ReactDOM.render(
-    //<Provider store={store}>
+    <Provider store={store}>
         <App />
-    //</Provider>
-    ,
+    </Provider>,
     document.getElementById('root'));
 registerServiceWorker();

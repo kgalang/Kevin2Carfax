@@ -5,8 +5,6 @@ import './App.css';
 import Landing from './components/Landing';
 import Quiz from './components/Quiz';
 
-import { connect } from 'react-redux';
-
 class App extends Component {
   render() {
     return (
@@ -14,7 +12,7 @@ class App extends Component {
       <Router>
         <div>
         <Route exact path="/" component={Landing} />
-        <Route exact path="/takequiz" component={Quiz} />
+        <Route exact path="/takequiz" component={Quiz}/>
         </div>
       </Router>
       </div>
@@ -22,5 +20,4 @@ class App extends Component {
   }
 }
 
-
-export default /*connect()*/(App);
+export default (App);
