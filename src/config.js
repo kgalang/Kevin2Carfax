@@ -1,1 +1,1 @@
-export const QUIZ_API_ENDPOINT = 'https://reqres.in/api/unknown';
+export const QUIZ_API_ENDPOINT = '127.0.0.1:8000/api/quizzes';

@@ -9,7 +9,7 @@ class Quiz extends Component {
     }
 
     render() {
-        console.log(this.props)
+        console.log(this.props.quiz)
         return (
             <div>
                 <h3>Quiz here</h3>
