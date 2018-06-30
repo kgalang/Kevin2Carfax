@@ -25,7 +25,7 @@ const allStoreEnhancers = compose(
 )
 
 const initialState = {
-    quiz: 'no quiz'
+    quiz: ''
 }
 
 const store = createStore(

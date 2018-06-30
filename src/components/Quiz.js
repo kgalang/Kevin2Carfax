@@ -2,20 +2,30 @@ import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import { fetchQuiz } from '../actions/quiz-actions';
 
+import Question from './Question';
 
 class Quiz extends Component {
-    componentDidMount() {
-        this.props.fetchQuiz()
+    constructor(props){
+        super(props);
+        this.props.fetchQuiz();
     }
 
     render() {
-        console.log(this.props.quiz)
+       if (this.props.quiz.data) {
+           console.log(this.props.quiz.data);
+           let data = this.props.quiz.data;
+
         return (
             <div>
-                <h3>Quiz here</h3>
-                <p>{JSON.stringify(this.props.quiz)}</p>
+                <h3>{data.title}</h3>
+                <div>
+                    <Question {...data}/>
+                </div>
             </div>
         );
+       } else {
+           return ('loading')
+       }
     }
 }
 
