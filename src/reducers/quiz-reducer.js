@@ -11,6 +11,12 @@ export default function quizReducer(state = '', { type, payload }) {
             };
 
         case NEXT_QUESTION:
+            let questionsArr = state.data.questions;
+            if ((state.questionNumber + 1) >= questionsArr.length){
+                return {
+                    ...state
+                }
+            }
             return {
                 ...state,
                 questionNumber: (state.questionNumber + 1)
@@ -22,7 +28,6 @@ export default function quizReducer(state = '', { type, payload }) {
                     ...state
                 }
             }
-
             return {
                 ...state,
                 questionNumber: (state.questionNumber - 1)
