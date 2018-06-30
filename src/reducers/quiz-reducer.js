@@ -1,4 +1,4 @@
-import { FETCH_QUIZ, NEXT_QUESTION } from '../actions/action-types';
+import { FETCH_QUIZ, NEXT_QUESTION, PREV_QUESTION } from '../actions/action-types';
 
 export default function quizReducer(state = '', { type, payload }) {
     switch (type) {
@@ -9,11 +9,25 @@ export default function quizReducer(state = '', { type, payload }) {
                 data: payload,
                 questionNumber: 0,                
             };
+
         case NEXT_QUESTION:
             return {
                 ...state,
                 questionNumber: (state.questionNumber + 1)
             }
+
+        case PREV_QUESTION:
+            if ((state.questionNumber - 1) < 0) {
+                return {
+                    ...state
+                }
+            }
+
+            return {
+                ...state,
+                questionNumber: (state.questionNumber - 1)
+            }
+
         default:
             return state;
     }

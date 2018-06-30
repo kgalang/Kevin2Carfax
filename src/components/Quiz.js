@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
-import { fetchQuiz, nextQuestion } from '../actions/quiz-actions';
+import { fetchQuiz, nextQuestion, prevQuestion } from '../actions/quiz-actions';
 
 import Question from './Question';
 
@@ -8,11 +8,16 @@ class Quiz extends Component {
     constructor(props){
         super(props);
         this.props.fetchQuiz();
-        this.onNextQuestion = this.onNextQuestion.bind(this);
+        this.handleNextQuestion = this.handleNextQuestion.bind(this);
+        this.handlePrevQuestion = this.handlePrevQuestion.bind(this);
     }
 
-    onNextQuestion() {
+    handleNextQuestion() {
         this.props.nextQuestion();
+    }
+
+    handlePrevQuestion() {
+        this.props.prevQuestion();
     }
 
     render() {
@@ -26,7 +31,8 @@ class Quiz extends Component {
                     {console.log(this.props.quiz.questionNumber)}
                     <Question {...this.props.quiz}/>
                 </div>
-                <button onClick={this.onNextQuestion}>Next</button>
+                <button onClick={this.handlePrevQuestion}>Previous</button>
+                <button onClick={this.handleNextQuestion}>Next</button>
             </div>
         );
        } else {
@@ -40,4 +46,4 @@ const mapStateToProps = state => {
 }
 
 
-export default connect(mapStateToProps, { fetchQuiz, nextQuestion })(Quiz);
+export default connect(mapStateToProps, { fetchQuiz, nextQuestion, prevQuestion })(Quiz);
