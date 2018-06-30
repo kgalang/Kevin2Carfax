@@ -24,13 +24,8 @@ const allStoreEnhancers = compose(
     window.devToolsExtension && window.devToolsExtension()
 )
 
-const initialState = {
-    quiz: ''
-}
-
 const store = createStore(
     allReducers,
-    initialState,
     allStoreEnhancers
 );
 

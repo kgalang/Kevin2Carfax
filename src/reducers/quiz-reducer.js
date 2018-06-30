@@ -1,26 +1,18 @@
-import { FETCH_QUIZ } from '../actions/action-types';
+import { FETCH_QUIZ, NEXT_QUESTION } from '../actions/action-types';
 
 export default function quizReducer(state = '', { type, payload }) {
     switch (type) {
         case FETCH_QUIZ:
-            // let questionChoices = payload.questions.map((obj) => {
-                
-            //     obj.choices.
-
-            //     // obj.choices.map((choice) => {
-            //     //     choice.choice
-            //     // });
-            // });
-            
-            
-
             return {
                 ...state,
                 quiz_title: payload.title,
                 data: payload,
-                questionNumber: 0,
-                //choices: questionChoices,
-                
+                questionNumber: 0,                
+            };
+        case NEXT_QUESTION:
+            return {
+                ...state,
+                questionNumber: (state.questionNumber + 1)
             }
         default:
             return state;
