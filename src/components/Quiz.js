@@ -9,6 +9,7 @@ class Quiz extends Component {
         super(props);
         this.props.fetchQuiz();
     }
+    
 
     render() {
        if (this.props.quiz.data) {
@@ -19,7 +20,7 @@ class Quiz extends Component {
             <div>
                 <h3>{data.title}</h3>
                 <div>
-                    <Question {...data}/>
+                    <Question {...this.props.quiz}/>
                 </div>
             </div>
         );

@@ -3,22 +3,15 @@ import Choices from './Choices';
 
 
 const Question = (props) => {
+    let questionsArr = props.data.questions;
+    let questionNum = props.questionNumber;
 
-    let question_elements = props.questions.map((questionObj) => {
         return (
-            <h4 key={questionObj.id}>
-                {questionObj.question}
-                <Choices {...questionObj} />
-            </h4>
-        )
-    });
-
-    console.log(props);
-    return (
-        <div>
-            {question_elements}
-        </div>
-    );
+            <div>
+                {questionsArr[questionNum].question}
+                <Choices {...questionsArr[questionNum]}/>
+            </div>
+        );
 }
 
 export default Question;

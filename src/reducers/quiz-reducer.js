@@ -17,7 +17,8 @@ export default function quizReducer(state = '', { type, payload }) {
             return {
                 ...state,
                 quiz_title: payload.title,
-                data: payload
+                data: payload,
+                questionNumber: 0,
                 //choices: questionChoices,
                 
             }
