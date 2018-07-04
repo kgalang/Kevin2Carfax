@@ -29,7 +29,7 @@ class Quiz extends Component {
                 <h3>{data.title}</h3>
                 <div>
                     {console.log(this.props.quiz.questionNumber)}
-                    <Question {...this.props.quiz}/>
+                    <Question {...this.props.quiz} />
                 </div>
                 <button onClick={this.handlePrevQuestion}>Previous</button>
                 <button onClick={this.handleNextQuestion}>Next</button>

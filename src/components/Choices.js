@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
-import { selectChoice } from '../actions/quiz-actions';
+import { selectChoice, nextQuestion } from '../actions/quiz-actions';
 
 class Choices extends Component{
     constructor(props){
@@ -9,6 +9,7 @@ class Choices extends Component{
 
     handleSelectChoice(choiceVal){
         this.props.selectChoice(choiceVal);
+        this.props.nextQuestion();
     }
 
     render() {
@@ -19,6 +20,7 @@ class Choices extends Component{
                 <div key={choiceObj.id}>
                     <label>
                         <input type="radio" value={choiceObj.choice}
+                        readOnly={true}
                         checked={choiceObj.choice === this.props.quiz.selectedChoices[this.props.quiz.questionNumber]}
                         onClick={() => this.handleSelectChoice(choiceObj.choice)}/>
                         {choiceObj.choice}
@@ -42,4 +44,4 @@ const mapStateToProps = state => {
 }
 
 
-export default connect(mapStateToProps, { selectChoice })(Choices);
+export default connect(mapStateToProps, { selectChoice, nextQuestion })(Choices);

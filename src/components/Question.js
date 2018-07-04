@@ -9,7 +9,7 @@ const Question = (props) => {
         return (
             <div>
                 {questionsArr[questionNum].question}
-                <Choices {...questionsArr[questionNum]}/>
+                <Choices {...questionsArr[questionNum]} />
             </div>
         );
 }
