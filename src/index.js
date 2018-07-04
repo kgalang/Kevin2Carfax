@@ -6,10 +6,10 @@ import registerServiceWorker from './registerServiceWorker';
 
 import thunk from 'redux-thunk';
 import {
+    createStore,
     applyMiddleware,
     compose,
-    combineReducers,
-    createStore
+    combineReducers
 } from 'redux';
 import { Provider } from 'react-redux';
 
@@ -22,7 +22,7 @@ const allReducers = combineReducers({
 const allStoreEnhancers = compose(
     applyMiddleware(thunk),
     window.devToolsExtension && window.devToolsExtension()
-)
+);
 
 const store = createStore(
     allReducers,

@@ -1,5 +1,10 @@
 import { QUIZ_API_ENDPOINT } from '../../src/config';
-import { FETCH_QUIZ, NEXT_QUESTION, PREV_QUESTION } from './action-types';
+import {
+    FETCH_QUIZ,
+    NEXT_QUESTION,
+    PREV_QUESTION,
+    SELECT_CHOICE
+} from './action-types';
 
 import { mockQuiz } from '../data/mockQuiz';
 
@@ -19,5 +24,14 @@ export const nextQuestion = () => {
 export const prevQuestion = () => {
     return {
         type: PREV_QUESTION 
+    }
+}
+
+export const selectChoice = (choice) => {
+    return {
+        type: SELECT_CHOICE,
+        payload: {
+            choice
+        }
     }
 }

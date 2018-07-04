@@ -1,4 +1,9 @@
-import { FETCH_QUIZ, NEXT_QUESTION, PREV_QUESTION } from '../actions/action-types';
+import { 
+    FETCH_QUIZ,
+    NEXT_QUESTION,
+    PREV_QUESTION,
+    SELECT_CHOICE
+} from '../actions/action-types';
 
 export default function quizReducer(state = '', { type, payload }) {
     switch (type) {
@@ -31,6 +36,12 @@ export default function quizReducer(state = '', { type, payload }) {
             return {
                 ...state,
                 questionNumber: (state.questionNumber - 1)
+            }
+
+        case SELECT_CHOICE:
+            return {
+                ...state,
+                selectedChoices: payload.choice
             }
 
         default:
