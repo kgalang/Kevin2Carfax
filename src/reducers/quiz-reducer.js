@@ -2,7 +2,8 @@ import {
     FETCH_QUIZ,
     NEXT_QUESTION,
     PREV_QUESTION,
-    SELECT_CHOICE
+    SELECT_CHOICE,
+    FETCH_ANSWERS
 } from '../actions/action-types';
 
 const initialState = {
@@ -15,10 +16,17 @@ export default function quizReducer(state = initialState, { type, payload }) {
         case FETCH_QUIZ:
             return {
                 ...state,
-                quiz_title: payload.title,
                 data: payload,
-                questionNumber: 0,                
+                questionNumber: 0
             };
+
+        case FETCH_ANSWERS:
+            return {
+                ...state,
+                answers: {
+                    
+                }
+            }
 
         case NEXT_QUESTION:
             let questionsArr = state.data.questions;

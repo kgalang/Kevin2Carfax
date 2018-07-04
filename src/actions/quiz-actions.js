@@ -1,6 +1,7 @@
 import { QUIZ_API_ENDPOINT } from '../../src/config';
 import {
     FETCH_QUIZ,
+    FETCH_ANSWERS,
     NEXT_QUESTION,
     PREV_QUESTION,
     SELECT_CHOICE
@@ -11,6 +12,13 @@ import { mockQuiz } from '../data/mockQuiz';
 export const fetchQuiz = () => {
     return {
         type: FETCH_QUIZ,
+        payload: mockQuiz
+    }
+}
+
+export const fetchAnswers = () => {
+    return {
+        type: FETCH_ANSWERS,
         payload: mockQuiz
     }
 }

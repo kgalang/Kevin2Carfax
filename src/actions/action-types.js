@@ -2,3 +2,4 @@ export const FETCH_QUIZ = 'FETCH_QUIZ';
 export const NEXT_QUESTION = 'NEXT_QUESTION';
 export const PREV_QUESTION = 'PREV_QUESTION';
 export const SELECT_CHOICE = 'SELECT_CHOICE';
+export const FETCH_ANSWERS = 'FETCH_ANSWERS';
