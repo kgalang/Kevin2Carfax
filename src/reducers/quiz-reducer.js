@@ -5,7 +5,12 @@ import {
     SELECT_CHOICE
 } from '../actions/action-types';
 
-export default function quizReducer(state = '', { type, payload }) {
+const initialState = {
+    selectedChoices: {
+    }
+}
+
+export default function quizReducer(state = initialState, { type, payload }) {
     switch (type) {
         case FETCH_QUIZ:
             return {

@@ -7,17 +7,20 @@ class Choices extends Component{
         super(props);
     }
 
-    handleSelectChoice(val){
-        this.props.selectChoice(val);
+    handleSelectChoice(choiceVal){
+        this.props.selectChoice(choiceVal);
     }
 
     render() {
         console.log(this.props)
+
         let choice_elements = this.props.choices.map((choiceObj) => {
             return (
                 <div key={choiceObj.id}>
                     <label>
-                        <input type="radio" value={choiceObj.choice} onClick={() => this.handleSelectChoice(choiceObj.choice)}/>
+                        <input type="radio" value={choiceObj.choice}
+                        checked={choiceObj.choice === this.props.quiz.selectedChoices[this.props.quiz.questionNumber]}
+                        onClick={() => this.handleSelectChoice(choiceObj.choice)}/>
                         {choiceObj.choice}
                     </label>
                 </div>
