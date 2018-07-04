@@ -9,7 +9,6 @@ class Choices extends Component{
 
     handleSelectChoice(choiceVal){
         this.props.selectChoice(choiceVal);
-        this.props.nextQuestion();
     }
 
     render() {
@@ -44,4 +43,4 @@ const mapStateToProps = state => {
 }
 
 
-export default connect(mapStateToProps, { selectChoice, nextQuestion })(Choices);
+export default connect(mapStateToProps, { selectChoice })(Choices);
