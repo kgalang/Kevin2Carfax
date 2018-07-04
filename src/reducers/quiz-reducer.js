@@ -41,7 +41,10 @@ export default function quizReducer(state = '', { type, payload }) {
         case SELECT_CHOICE:
             return {
                 ...state,
-                selectedChoices: payload.choice
+                selectedChoices: {
+                    ...state.selectedChoices,
+                    [state.questionNumber]: payload.choice
+                }
             }
 
         default:
