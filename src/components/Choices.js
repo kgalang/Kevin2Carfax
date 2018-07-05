@@ -12,7 +12,6 @@ class Choices extends Component{
     }
 
     render() {
-        console.log(this.props.quiz.answers)
 
         let choice_elements = this.props.choices.map((choiceObj) => {
             return (

@@ -34,6 +34,9 @@ class Quiz extends Component {
                 </div>
                 <button onClick={this.handlePrevQuestion}>Previous</button>
                 <button onClick={this.handleNextQuestion}>Next</button>
+                <div>
+                    <button>Submit</button>
+                </div>
             </div>
         );
        } else {
