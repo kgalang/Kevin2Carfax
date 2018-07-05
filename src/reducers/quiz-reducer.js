@@ -3,7 +3,8 @@ import {
     NEXT_QUESTION,
     PREV_QUESTION,
     SELECT_CHOICE,
-    FETCH_ANSWERS
+    FETCH_ANSWERS,
+    CHECK_ANSWERS
 } from '../actions/action-types';
 
 const initialState = {
@@ -65,6 +66,12 @@ export default function quizReducer(state = initialState, { type, payload }) {
                     ...state.selectedChoices,
                     [state.questionNumber]: payload.choice
                 }
+            }
+
+        case CHECK_ANSWERS:
+            return {
+                ...state,
+                results: "test"
             }
 
         default:

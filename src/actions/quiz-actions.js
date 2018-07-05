@@ -4,7 +4,8 @@ import {
     FETCH_ANSWERS,
     NEXT_QUESTION,
     PREV_QUESTION,
-    SELECT_CHOICE
+    SELECT_CHOICE,
+    CHECK_ANSWERS
 } from './action-types';
 
 import { mockQuiz } from '../data/mockQuiz';
@@ -41,5 +42,11 @@ export const selectChoice = (choice) => {
         payload: {
             choice
         }
+    }
+}
+
+export const checkAnswers = () => {
+    return {
+        type: CHECK_ANSWERS
     }
 }
