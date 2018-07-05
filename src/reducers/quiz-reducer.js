@@ -21,10 +21,17 @@ export default function quizReducer(state = initialState, { type, payload }) {
             };
 
         case FETCH_ANSWERS:
+            let answers = payload.questions.map((questionObj, i) => {
+                return {
+                    [i]: questionObj.answer
+                };
+            });
+            answers = Object.assign(...answers)
+
             return {
                 ...state,
                 answers: {
-                    
+                    ...answers
                 }
             }
 
