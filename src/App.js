@@ -4,6 +4,7 @@ import logo from './logo.svg';
 import './App.css';
 import Landing from './components/Landing';
 import Quiz from './components/Quiz';
+import Results from './components/Results';
 
 class App extends Component {
   render() {
@@ -13,6 +14,7 @@ class App extends Component {
         <div>
         <Route exact path="/" component={Landing} />
         <Route exact path="/takequiz" component={Quiz}/>
+        <Route exact path="/results" component={Results}/>
         </div>
       </Router>
       </div>

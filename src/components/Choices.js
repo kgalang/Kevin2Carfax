@@ -12,7 +12,7 @@ class Choices extends Component{
     }
 
     render() {
-
+        console.log(this.props);
         let choice_elements = this.props.choices.map((choiceObj) => {
             return (
                 <div key={choiceObj.id}>

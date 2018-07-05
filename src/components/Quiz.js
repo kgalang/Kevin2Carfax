@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
+import { Link } from 'react-router-dom';
 import { fetchQuiz, fetchAnswers, nextQuestion, prevQuestion } from '../actions/quiz-actions';
 
 import Question from './Question';
@@ -35,7 +36,7 @@ class Quiz extends Component {
                 <button onClick={this.handlePrevQuestion}>Previous</button>
                 <button onClick={this.handleNextQuestion}>Next</button>
                 <div>
-                    <button>Submit</button>
+                    <Link to="/results">Submit</Link>
                 </div>
             </div>
         );
