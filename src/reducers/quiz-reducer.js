@@ -68,12 +68,6 @@ export default function quizReducer(state = initialState, { type, payload }) {
                 }
             }
 
-        case CHECK_ANSWERS:
-            return {
-                ...state,
-                results: "test"
-            }
-
         default:
             return state;
     }

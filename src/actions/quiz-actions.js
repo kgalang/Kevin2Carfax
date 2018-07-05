@@ -45,8 +45,3 @@ export const selectChoice = (choice) => {
     }
 }
 
-export const checkAnswers = () => {
-    return {
-        type: CHECK_ANSWERS
-    }
-}

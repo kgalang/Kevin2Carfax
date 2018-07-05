@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import { Link } from 'react-router-dom';
-import { fetchQuiz, fetchAnswers, nextQuestion, prevQuestion, checkAnswers } from '../actions/quiz-actions';
+import { fetchQuiz, fetchAnswers, nextQuestion, prevQuestion } from '../actions/quiz-actions';
 
 import Question from './Question';
 
@@ -12,7 +12,6 @@ class Quiz extends Component {
         this.props.fetchAnswers();
         this.handleNextQuestion = this.handleNextQuestion.bind(this);
         this.handlePrevQuestion = this.handlePrevQuestion.bind(this);
-        this.handleCheckAnswers = this.handleCheckAnswers.bind(this);
     }
 
     handleNextQuestion() {
@@ -21,10 +20,6 @@ class Quiz extends Component {
 
     handlePrevQuestion() {
         this.props.prevQuestion();
-    }
-
-    handleCheckAnswers() {
-        this.props.checkAnswers();
     }
 
     render() {
@@ -41,7 +36,7 @@ class Quiz extends Component {
                 <button onClick={this.handlePrevQuestion}>Previous</button>
                 <button onClick={this.handleNextQuestion}>Next</button>
                 <div>
-                    <Link onClick={this.handleCheckAnswers} to="/results">Submit</Link>
+                    <Link to="/results">Submit</Link>
                 </div>
             </div>
         );
@@ -56,4 +51,4 @@ const mapStateToProps = state => {
 }
 
 
-export default connect(mapStateToProps, { fetchQuiz, fetchAnswers, nextQuestion, prevQuestion, checkAnswers})(Quiz);
+export default connect(mapStateToProps, { fetchQuiz, fetchAnswers, nextQuestion, prevQuestion })(Quiz);
