@@ -5,7 +5,6 @@ import {
     NEXT_QUESTION,
     PREV_QUESTION,
     SELECT_CHOICE,
-    CHECK_ANSWERS
 } from './action-types';
 
 import { mockQuiz } from '../data/mockQuiz';
