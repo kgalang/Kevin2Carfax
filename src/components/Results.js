@@ -2,9 +2,6 @@ import React, { Component } from 'react';
 import { connect } from 'react-redux';
 
 class Results extends Component{
-    constructor(props){
-        super(props);
-    }
 
     render() {
         if (this.props.quiz.answers){
@@ -24,7 +21,7 @@ class Results extends Component{
 
             return (
                 <div>
-                Results: You got {totalIncorrect} wrong!
+                Results: You got {totalIncorrect} wrong out of {totalQuestions}!
                 </div>
             );
         } else { console.log("Quiz never loaded") }

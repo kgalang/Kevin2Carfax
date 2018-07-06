@@ -1,4 +1,3 @@
-import { QUIZ_API_ENDPOINT } from '../../src/config';
 import {
     FETCH_QUIZ,
     FETCH_ANSWERS,

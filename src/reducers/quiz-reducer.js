@@ -4,7 +4,6 @@ import {
     PREV_QUESTION,
     SELECT_CHOICE,
     FETCH_ANSWERS,
-    CHECK_ANSWERS
 } from '../actions/action-types';
 
 const initialState = {
