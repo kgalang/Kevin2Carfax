@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
-import { selectChoice } from '../actions/quiz-actions';
+import { selectChoice } from '../../actions/quiz-actions';
 
 class Choices extends Component{
 

@@ -1,9 +1,9 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import { Link } from 'react-router-dom';
-import { fetchQuiz, fetchAnswers, nextQuestion, prevQuestion } from '../actions/quiz-actions';
+import { fetchQuiz, fetchAnswers, nextQuestion, prevQuestion } from '../../actions/quiz-actions';
 
-import Question from './Question';
+import Question from '../Question/Question';
 
 class Quiz extends Component {
     constructor(props){
