@@ -8,15 +8,13 @@ import Results from './components/Results/Results';
 class App extends Component {
   render() {
     return (
-      <div className="App">
       <Router>
-        <div>
+        <div className="App grid">
         <Route exact path="/" component={Landing} />
         <Route exact path="/takequiz" component={Quiz}/>
         <Route exact path="/results" component={Results}/>
         </div>
       </Router>
-      </div>
     );
   }
 }
