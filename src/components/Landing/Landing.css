@@ -1,14 +1,3 @@
-.header {
-    grid-area: header;
-    background: #556163;
-    color: #FFFFFF;
-    text-shadow: 2px 4px 3px rgba(0,0,0,0.3);
-    box-shadow: 2px 4px 3px rgba(0,0,0,0.1);
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
 .me-icon {
     height: 20%;
     width: auto;
@@ -27,6 +16,7 @@
 }
 
 .landing {
+    height: 100%;
     grid-area: content-top / content-top / content / content;
     color: #FF4B0A;
     display: flex;
@@ -43,16 +33,3 @@
     box-shadow: 2px 4px 3px rgba(0,0,0,0.3);
 }
 
-.footer {
-    grid-area: footer;
-    background: #556163;
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-}
-
-.footer a {
-    color: #FFFFFF;
-    text-shadow: 2px 4px 3px rgba(0,0,0,0.3);
-    text-decoration: none;
-}

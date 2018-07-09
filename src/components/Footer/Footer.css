@@ -1,0 +1,13 @@
+.footer {
+    grid-area: footer;
+    background: #556163;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.footer a {
+    color: #FFFFFF;
+    text-shadow: 2px 4px 3px rgba(0,0,0,0.3);
+    text-decoration: none;
+}
