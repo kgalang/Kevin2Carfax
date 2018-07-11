@@ -1,0 +1,17 @@
+.question-choices-container {
+    grid-area: content;
+}
+
+.quiz-question {
+    color: #ffffff;
+    background: #E71532;
+    margin-top: 0;
+    padding: 15px;
+    height: 100%;
+    text-shadow: 2px 4px 3px rgba(0,0,0,0.1);
+    grid-area: content-top;
+}
+
+.choices-container {
+    grid-area: content;
+}

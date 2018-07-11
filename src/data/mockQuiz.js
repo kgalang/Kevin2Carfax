@@ -1,6 +1,6 @@
 export let mockQuiz = {
 id: 1,
-title: "How good of a fit is Kevin for Everfi?",
+title: "How good of a fit is Kevin for CATT Lab?",
 questions: [
         {
             id: 1,

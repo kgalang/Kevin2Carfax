@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import './Quiz.css';
 import { connect } from 'react-redux';
 import { Link } from 'react-router-dom';
 import { fetchQuiz, fetchAnswers, nextQuestion, prevQuestion } from '../../actions/quiz-actions';
@@ -27,17 +28,25 @@ class Quiz extends Component {
            let data = this.props.quiz.data;
 
         return (
-            <div>
-                <h3>{data.title}</h3>
-                <div>
-                    {console.log(this.props.quiz.questionNumber)}
-                    <Question {...this.props.quiz} />
-                </div>
-                <button onClick={this.handlePrevQuestion}>Previous</button>
-                <button onClick={this.handleNextQuestion}>Next</button>
-                <div>
-                    <Link to="/results">Submit</Link>
-                </div>
+            <div className="content-grid">
+                    <div className="question-choices-controls">
+                        <div>
+                            <Question {...this.props.quiz} />
+                        </div>
+                        <div className="controls">
+                            <div className="prev-next">
+                                <div>
+                                <button id="prev-next-buttons" className="button" onClick={this.handlePrevQuestion}>Previous</button>
+                                </div>
+                                <div>
+                                <button id="prev-next-buttons" className="button" onClick={this.handleNextQuestion}>Next</button>
+                                </div>
+                            </div>
+                            <div className="submit-container">
+                                <button className="button"><Link to="/results" id="submit-button">Submit</Link></button>
+                            </div>
+                        </div>
+                    </div>
             </div>
         );
        } else {

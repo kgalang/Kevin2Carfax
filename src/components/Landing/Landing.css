@@ -1,12 +1,12 @@
 .me-icon {
-    height: 20%;
+    height: 20vh;
     width: auto;
     border-radius: 50%;
     box-shadow: 2px 4px 3px rgba(0,0,0,0.3);
 }
 
 .orange-text {
-    color: #FF4B0A;
+    color: #FFD32B;
 }
 
 .quiz-intro {
@@ -16,9 +16,8 @@
 }
 
 .landing {
-    height: 100%;
     grid-area: content-top / content-top / content / content;
-    color: #FF4B0A;
+    color: #E71532;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -29,7 +28,7 @@
     color: white;
     padding-left: 10px;
     padding-right: 10px;
-    background: #FF4B0A;
+    background: #E71532;
     box-shadow: 2px 4px 3px rgba(0,0,0,0.3);
 }
 
