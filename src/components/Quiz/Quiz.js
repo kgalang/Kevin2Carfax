@@ -9,10 +9,13 @@ import Question from '../Question/Question';
 class Quiz extends Component {
     constructor(props){
         super(props);
-        this.props.fetchQuiz();
-        this.props.fetchAnswers();
         this.handleNextQuestion = this.handleNextQuestion.bind(this);
         this.handlePrevQuestion = this.handlePrevQuestion.bind(this);
+    }
+
+    componentDidMount() {
+        this.props.fetchQuiz();
+        this.props.fetchAnswers();
     }
 
     handleNextQuestion() {
