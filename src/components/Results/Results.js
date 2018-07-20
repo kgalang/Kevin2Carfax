@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
+import './Results.css';
 
 class Results extends Component{
 
@@ -16,11 +17,21 @@ class Results extends Component{
                 }
             }
 
-            return (
-                <div>
-                Kevin is a {totalCorrect/totalQuestions*100}% match!
-                </div>
-            );
+            const results = totalCorrect/totalQuestions*100;
+            return results === 100
+                ? (
+                    <div>
+                    <h3>Kevin is a {results}% match!</h3>
+                    </div>
+                  )
+                : (
+                    <div>
+                    <h3>
+                        This was fixed for you to be a 100% match and you got {results}% so...
+                    </h3>
+                    <img width="300px" src="https://memegenerator.net/img/instances/50919220/its-a-no-from-me-dawg.jpg"/>
+                    </div>
+                  )
         } else { console.log("Quiz never loaded") }
     }
 }

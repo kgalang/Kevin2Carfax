@@ -26,7 +26,6 @@ html, body, root{
   display: grid;
   grid-area: content;
   height: 100%;
-  grid-template-rows: 1fr max-content max-content 1fr;
   grid-template-areas:
     "content-top"
     "content";
