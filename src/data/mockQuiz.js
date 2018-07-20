@@ -1,6 +1,6 @@
 export let mockQuiz = {
 id: 1,
-title: "How well does Kevin fit in with the CARFAX culture??",
+title: "How well does Kevin fit in with your company?",
 questions: [
         {
             answer: "an empathetic and open minded person that wants to help others",

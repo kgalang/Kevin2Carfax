@@ -9,7 +9,7 @@ const Landing = () => {
             <div className="content-grid">
                 <div className="landing">
                 <img src={me} alt="Kevin"className="me-icon"></img>
-                <h2 className="quiz-intro">How well does Kevin fit with CATT Lab?</h2>
+                <h2 className="quiz-intro">How well does Kevin fit in with your company?</h2>
                 <Link to='/takequiz/' id="start-quiz">
                     <h3>Start Quiz</h3>
                 </Link>
