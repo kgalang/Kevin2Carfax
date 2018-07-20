@@ -6,7 +6,13 @@
 }
 
 .orange-text {
-    color: #FFD32B;
+    color: white;
+    letter-spacing: 3px;
+
+}
+
+.carfax-x {
+    font-size: inherit;
 }
 
 .quiz-intro {
@@ -17,7 +23,7 @@
 
 .landing {
     grid-area: content-top / content-top / content / content;
-    color: #E71532;
+    color: #2F77BD;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -28,7 +34,7 @@
     color: white;
     padding-left: 10px;
     padding-right: 10px;
-    background: #E71532;
+    background: #2F77BD;
     box-shadow: 2px 4px 3px rgba(0,0,0,0.3);
 }
 

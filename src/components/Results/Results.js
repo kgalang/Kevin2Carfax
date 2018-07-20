@@ -8,20 +8,17 @@ class Results extends Component{
             const answersObj = this.props.quiz.answers;
             const submittedChoicesObj = this.props.quiz.selectedChoices;
             const totalQuestions = Object.keys(answersObj).length;
-            let incorrects = {};
-            let totalIncorrect;
+            let totalCorrect = 0;
 
             for (const key in answersObj) {
-                if (answersObj[key] !== submittedChoicesObj[key]) {
-                    incorrects[key] = answersObj[key];
+                if (answersObj[key] === submittedChoicesObj[key]) {
+                    totalCorrect++;
                 }
             }
 
-            totalIncorrect = Object.keys(incorrects).length;
-
             return (
                 <div>
-                Results: You got {totalIncorrect} wrong out of {totalQuestions}!
+                Kevin is a {totalCorrect/totalQuestions*100}% match!
                 </div>
             );
         } else { console.log("Quiz never loaded") }
